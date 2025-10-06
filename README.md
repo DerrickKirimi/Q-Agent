@@ -1,21 +1,23 @@
-Q-Agent 🧠
+# Q-Agent
+
 Graph-aware Question Answering Agent for Knowledge Graphs
 Q-Agent is a powerful, LLM-powered system that seamlessly bridges natural language queries with structured data in a Neo4j knowledge graph. By leveraging Azure OpenAI for language and embedding models, LangChain, and LangGraph, it transforms user questions into precise Cypher queries, executes multi-hop traversals, and delivers context-rich, structured responses. The system ensures reliability through guardrails, query validation, and correction, making it ideal for enterprise-grade applications.
 
-🚀 Features
+# Features
 
-Semantic Query Routing: Classifies and routes user queries to the appropriate domain or subgraph (e.g., components, policies, workspaces).
-Dynamic Cypher Generation: Converts natural language into optimized Cypher queries using few-shot learning and semantic similarity example selection.
-Multi-hop Traversal: Supports complex reasoning across connected nodes for deeper insights into graph relationships.
-Guardrails & Constraints: Ensures queries are relevant, safe, and aligned with the graph schema.
-Query Validation & Correction: Validates Cypher queries for syntax and semantic accuracy, with deterministic correction for errors.
-Structured JSON Outputs: Delivers machine-readable responses for integration into downstream workflows.
-LangGraph Orchestration: Manages stateful workflows for query processing, validation, execution, and answer generation.
-Vector-Augmented RAG: Integrates Azure OpenAI embeddings for hybrid symbolic and semantic reasoning.
-Visualization Support: Generates graph visualizations to enhance interpretability (via Graphviz or similar tools).
+- Semantic Query Routing: Classifies and routes user queries to the appropriate domain or subgraph (e.g., components, policies, workspaces).
+- Dynamic Cypher Generation: Converts natural language into optimized Cypher queries using few-shot learning and semantic similarity example selection.
+- Multi-hop Traversal: Supports complex reasoning across connected nodes for deeper insights into graph relationships.
+- Guardrails & Constraints: Ensures queries are relevant, safe, and aligned with the graph schema.
+- Query Validation & Correction: Validates Cypher queries for syntax and semantic accuracy, with deterministic correction for errors.
+- Structured JSON Outputs: Delivers machine-readable responses for integration into downstream workflows.
+- LangGraph Orchestration: Manages stateful workflows for query processing, validation, execution, and answer generation.
+- Vector-Augmented RAG: Integrates Azure OpenAI embeddings for hybrid symbolic and semantic reasoning.
+- Visualization Support: Generates graph visualizations to enhance interpretability (via Graphviz or similar tools).
 
 
-🏗️ Architecture
+# 🏗️ Architecture
+```
 User Query ─► Guardrails ─► Cypher Generation ─► Validation/Correction ─► Neo4j Execution
                                   │                            │
                                   ▼                            ▼
@@ -24,11 +26,12 @@ User Query ─► Guardrails ─► Cypher Generation ─► Validation/Correcti
                                   ▼
                      Knowledge Graph Visualization
 
+```
 
-LLM Core: Azure OpenAI GPT models for chat and embeddings.
-Pipeline: LangGraph for workflow orchestration, LangChain for chain management.
-Storage: Neo4j for graph data, with optional PostgreSQL + pgvector for vector-augmented RAG.
-Augmentation: Semantic similarity-based example selection for robust Cypher query synthesis.
+- LLM Core: Azure OpenAI GPT models for chat and embeddings.
+- Pipeline: LangGraph for workflow orchestration, LangChain for chain management.
+- Storage: Neo4j for graph data, with optional PostgreSQL + pgvector for vector-augmented RAG.
+- Augmentation: Semantic similarity-based example selection for robust Cypher query synthesis.
 
 
 📦 Quick Start
