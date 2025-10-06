@@ -1,6 +1,7 @@
 # Q-Agent
 
 Graph-aware Question Answering Agent for Knowledge Graphs
+
 Q-Agent is a powerful, LLM-powered system that seamlessly bridges natural language queries with structured data in a Neo4j knowledge graph. By leveraging Azure OpenAI for language and embedding models, LangChain, and LangGraph, it transforms user questions into precise Cypher queries, executes multi-hop traversals, and delivers context-rich, structured responses. The system ensures reliability through guardrails, query validation, and correction, making it ideal for enterprise-grade applications.
 
 # Features
